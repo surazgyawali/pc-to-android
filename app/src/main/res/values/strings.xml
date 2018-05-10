@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">TcpService</string>
+    <string name="port_msg">Listening on the port:</string>
+</resources>
