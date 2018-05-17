@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#007bff</color>
+    <color name="colorPrimary">#000000</color>
     <color name="colorPrimaryDark">#343a40</color>
-    <color name="colorAccent">#6c757d</color>
+    <color name="colorAccent">#f8f8f8</color>
 
     <color name="blue">#007bff</color>
     <color name="indigo">#6610f2</color>
@@ -25,5 +25,10 @@
     <color name="danger">#dc3545</color>
     <color name="light">#f8f9fa</color>
     <color name="dark">#343a40</color>
+
+    <color name="colorLightTitleBar">#8e8e8e</color>
+    <color name="colorBackground">#000000</color>
+    <color name="colorText">#f8f8f8</color>
+    <color name="colorTitleBackground">#191919</color>
 
 </resources>
