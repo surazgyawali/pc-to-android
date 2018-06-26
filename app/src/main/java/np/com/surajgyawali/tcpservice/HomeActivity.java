@@ -133,44 +133,6 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-//        mButtonStartServer.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-////                if (validateSubmitData()) {
-////
-////                    prefsEditor.putInt("port", Integer.parseInt(mEditTextPort.getText().toString()));
-////                    prefsEditor.putString("password", mEditTextPassword2.getText().toString());
-////                    prefsEditor.apply();
-////                        String password = sharedPreferences.getString("password", null);
-////                        int port = sharedPreferences.getInt("port", 8848);
-//////                        Log.d("password: " , password );
-////                        Log.d("port", Integer.toString(port));
-////
-////                    Intent serverIntent = new Intent(HomeActivity.this, ServerActivity.class);
-////                    startActivity(serverIntent);
-////                }
-////
-//            }
-//        });
-
-//        mEditTextPassword2.addTextChangedListener(new TextWatcher() {
-//            public void afterTextChanged(Editable s) {
-//                String strPass1 = mEditTextPassword1.getText().toString();
-//                String strPass2 = mEditTextPassword2.getText().toString();
-//
-//                if (!strPass1.equals(strPass2)) {
-//
-//                    mEditTextPassword2.setError(getResources().getString(R.string.password_not_match));
-//
-//                }
-//            }
-
-
-//            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-//            }
-//
-//            public void onTextChanged(CharSequence s, int start, int before, int count) {
-//            }
         mEditTextPort.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
