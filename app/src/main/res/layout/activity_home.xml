@@ -70,7 +70,7 @@
             app:layout_constraintBottom_toTopOf="@+id/tv_ip_label"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/et_port" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_port" />
 
         <TextView
             android:id="@+id/tv_ip_label"
@@ -88,7 +88,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/et_port" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_port" />
 
         <TextView
             android:id="@+id/title_switch"
@@ -220,7 +220,7 @@
             android:textColorHighlight="@color/colorAccent"
             android:textColorHint="@color/colorAccent"
             android:textSize="24sp"
-            app:layout_constraintBottom_toTopOf="@+id/et_password"
+            app:layout_constraintBottom_toTopOf="@+id/tv_password"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -229,14 +229,14 @@
             app:layout_constraintVertical_chainStyle="packed" />
 
 
-        <EditText
-            android:id="@+id/et_password"
+        <TextView
+            android:id="@+id/tv_password"
             android:layout_width="0dp"
             android:layout_height="36dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
+            android:gravity="center_vertical"
             android:hint="@string/password_hint"
-            android:inputType="textPassword|textVisiblePassword"
             android:padding="8dp"
             android:textColor="@color/colorAccent"
             android:textColorHint="@color/colorAccent"
@@ -254,7 +254,7 @@
             app:layout_constraintBottom_toTopOf="@+id/tv_port_label"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/et_password" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_password" />
 
         <TextView
             android:id="@+id/tv_port_label"
@@ -268,22 +268,21 @@
             android:text="@string/set_port"
             android:textColor="@color/colorAccent"
             android:textSize="24sp"
-            app:layout_constraintBottom_toTopOf="@+id/et_port"
+            app:layout_constraintBottom_toTopOf="@+id/tv_port"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/et_password" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_password" />
 
-        <EditText
-            android:id="@+id/et_port"
-            style="@android:style/Widget.AutoCompleteTextView"
+        <TextView
+            android:id="@+id/tv_port"
             android:layout_width="0dp"
             android:layout_height="40dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:digits="0123456789"
+            android:gravity="center_vertical"
             android:hint="@string/port_hint"
-            android:inputType="number"
             android:maxLength="5"
             android:paddingLeft="8dp"
             android:paddingStart="8dp"
