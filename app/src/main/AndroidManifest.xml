@@ -19,6 +19,8 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".HomeActivity"
+            android:screenOrientation="sensorPortrait"
+            android:windowSoftInputMode="stateAlwaysHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -29,7 +31,6 @@
         <service
             android:name=".NetworkService"
             android:enabled="true"
-            android:exported="true"/>
             android:exported="true" />
 
         <receiver
