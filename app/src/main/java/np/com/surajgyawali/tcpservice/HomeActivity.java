@@ -37,6 +37,7 @@ public class HomeActivity extends AppCompatActivity {
 //    Integer mPort;
     ServerSocket serverSocket;
     String message = "";
+    private static final int MY_PERMISSIONS_REQUEST_SEND_SMS = 1;
 
 
     @Override
@@ -59,8 +60,8 @@ public class HomeActivity extends AppCompatActivity {
 
         mEditTextPassword.setText(mPassword);
         mEditTextPort.setText(utilities.getUserPort(sharedPreferences).toString());
-        mIpTextView.setText(utilities.getIPAddress(true));
-//        socketServerThread = new Thread(new SocketServerThread());
+
+        utilities.checkForSmsPermission(this,this);
 
         if (utilities.checkWifiOnAndConnected(this)) {
 
@@ -76,6 +77,7 @@ public class HomeActivity extends AppCompatActivity {
         if (serverSwitchOn) {
             mServerStartSwitch.setChecked(true);
             mServerStartSwitch.setText("Service is ON");
+            utilities.checkForSmsPermission(this,this);
             startService();
 
         } else {
@@ -102,6 +104,7 @@ public class HomeActivity extends AppCompatActivity {
                 if (isChecked) {
 
                         startService();
+                    utilities.checkForSmsPermission(HomeActivity.this,HomeActivity.this);
                     mServerStartSwitch.setText("Service is ON");
 
                 } else {
@@ -189,6 +192,8 @@ public class HomeActivity extends AppCompatActivity {
                 prefsEditor.putString("password", password);
                 mEditTextPassword.setText(password);
                 prefsEditor.commit();
+                stopService();
+                startService();
             }
 
         });

@@ -10,6 +10,8 @@
     <string name="password_not_match">Passwords do not match!!!</string>
     <string name="password_match">Good to go.</string>
     <string name="title_activity_settings">Settings</string>
+    <string name="permission_not_granted">Sending sms is not permitted by user.</string>
+    <string name="permission_granted">Sending sms is permitted by user.</string>
 
     <!-- Strings related to Settings -->
 
