@@ -1,9 +1,12 @@
 package np.com.surajgyawali.tcpservice;
 
 import android.app.AlertDialog;
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.wifi.WifiManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.InputType;
@@ -58,6 +61,16 @@ public class HomeActivity extends AppCompatActivity {
         mEditTextPort.setText(utilities.getUserPort(sharedPreferences).toString());
         mIpTextView.setText(utilities.getIPAddress(true));
 //        socketServerThread = new Thread(new SocketServerThread());
+
+        if (utilities.checkWifiOnAndConnected(this)) {
+
+            mIpTextView.setText(utilities.getIPAddress(true));
+
+        } else {
+
+            mIpTextView.setText("Not connected to a network.");
+
+        }
 
 
         if (serverSwitchOn) {

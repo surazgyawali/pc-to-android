@@ -149,10 +149,21 @@ public class Utilities {
 
         catch(Exception e){
 
-            Log.i(TAG,"error  " + e.toString());
+    public static boolean checkWifiOnAndConnected(Context context) {
+        WifiManager wifiMgr = (WifiManager) context.getSystemService(Context.WIFI_SERVICE);
 
+        if (wifiMgr.isWifiEnabled()) { // Wi-Fi adapter is ON
+
+            WifiInfo wifiInfo = wifiMgr.getConnectionInfo();
+
+            if( wifiInfo.getNetworkId() == -1 ){
+                return false; // Not connected to an access point
+            }
+            return true; // Connected to an access point
         }
-
+        else {
+            return false; // Wi-Fi adapter is OFF
+        }
     }
 
 
