@@ -195,8 +195,9 @@ public class NetworkService extends Service {
 
 
 //                        utilities.replyToClient("12", tempClientSocket);
-                        utilities.sendSMS(smsChunk, phoneNumber, NetworkService.this);
-
+//                        utilities.sendSMS(smsChunk, phoneNumber, NetworkService.this);
+                            //this method can be used to sendSMS to client
+                        //i was stuck when client couldn't receive any messages from server's end
                     }
 
                 } catch (IOException e) {
